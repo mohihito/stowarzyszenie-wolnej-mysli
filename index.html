@@ -12,112 +12,127 @@
       font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     }
     .font-serif { font-family: 'Times New Roman', Times, serif; }
-    .red { color: #D32F2F; }
-    .bg-red-main { background-color: #D32F2F; }
-    .border-red-main { border-color: #D32F2F; }
+    .patriot-bg {
+      background-image: url('https://pplx-res.cloudinary.com/image/private/user_uploads/45036844/808809f5-6a5d-4545-89db-dbc1a0a66686/image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .bg-white-80 {
+      background: rgba(255,255,255,0.80);
+    }
+    .bg-red-80 {
+      background: rgba(220,20,60,0.80);
+    }
+    .red { color: #DC143C; }
+    .bg-red-main { background-color: #DC143C; }
+    .border-red-main { border-color: #DC143C; }
     .hover\:bg-red-dark:hover { background-color: #b71c1c; }
     .hover\:text-red-dark:hover { color: #b71c1c; }
   </style>
 </head>
-<body class="bg-white text-black font-calibri">
+<body class="patriot-bg font-calibri min-h-screen">
 
-  <!-- HEADER Z LOGO -->
-  <header class="bg-white shadow-lg py-6">
-    <div class="max-w-5xl mx-auto flex flex-col items-center">
-      <img src="logo.jpg" alt="Stowarzyszenie Wolnej Myśli" class="w-40 h-auto mb-4">
-      <h1 class="text-3xl md:text-4xl font-serif text-black tracking-wide text-center font-bold">
-        STOWARZYSZENIE<br>WOLNEJ MYŚLI
-      </h1>
-    </div>
-  </header>
+  <!-- Overlay for readability -->
+  <div class="min-h-screen w-full">
+    <!-- HEADER Z LOGO -->
+    <header class="bg-white-80 shadow-lg py-6">
+      <div class="max-w-5xl mx-auto flex flex-col items-center">
+        <img src="logo.jpg" alt="Stowarzyszenie Wolnej Myśli" class="w-40 h-auto mb-4">
+        <h1 class="text-3xl md:text-4xl font-serif text-black tracking-wide text-center font-bold drop-shadow">
+          STOWARZYSZENIE<br>WOLNEJ MYŚLI
+        </h1>
+      </div>
+    </header>
 
-  <!-- HERO -->
-  <section class="py-16 bg-gradient-to-b from-white to-red-50">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-serif font-bold mb-4 red">
-        Promujemy otwarty dialog i krytyczne myślenie
-      </h2>
-      <p class="text-lg text-gray-700 mb-8">
-        Wspieramy wolność intelektualną, racjonalny dyskurs i prawo do niezależnego myślenia bez dogmatów i cenzury.
-      </p>
-      <a href="#contact" class="inline-block bg-red-main text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-red-dark transition-colors">
-        Dołącz do nas
-      </a>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="py-16 bg-white-80">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold mb-4 red drop-shadow">
+          Promujemy otwarty dialog i krytyczne myślenie
+        </h2>
+        <p class="text-lg text-gray-800 mb-8">
+          Wspieramy wolność intelektualną, racjonalny dyskurs i prawo do niezależnego myślenia bez dogmatów i cenzury.
+        </p>
+        <a href="#contact" class="inline-block bg-red-main text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-red-dark transition-colors">
+          Dołącz do nas
+        </a>
+      </div>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-14 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-xl font-serif font-bold text-center mb-10 red">O nas</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-red-50 rounded-xl shadow p-8 text-center border-red-main border-t-4">
-          <i class="fas fa-lightbulb text-3xl red mb-4"></i>
-          <h4 class="font-serif font-bold mb-2">Wolne Badania</h4>
-          <p class="text-gray-700">Wspieramy dążenie do wiedzy poprzez rozum, dowody i otwarte badania.</p>
-        </div>
-        <div class="bg-red-50 rounded-xl shadow p-8 text-center border-red-main border-t-4">
-          <i class="fas fa-comments text-3xl red mb-4"></i>
-          <h4 class="font-serif font-bold mb-2">Otwarty Dialog</h4>
-          <p class="text-gray-700">Tworzymy przestrzenie dla szacunkowej debaty i wymiany perspektyw.</p>
-        </div>
-        <div class="bg-red-50 rounded-xl shadow p-8 text-center border-red-main border-t-4">
-          <i class="fas fa-balance-scale text-3xl red mb-4"></i>
-          <h4 class="font-serif font-bold mb-2">Racjonalne Myślenie</h4>
-          <p class="text-gray-700">Promujemy krytyczne myślenie i decyzje oparte na dowodach.</p>
+    <!-- ABOUT -->
+    <section id="about" class="py-14 bg-white-80">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-xl font-serif font-bold text-center mb-10 red drop-shadow">O nas</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow p-8 text-center border-red-main border-t-4 bg-opacity-90">
+            <i class="fas fa-lightbulb text-3xl red mb-4"></i>
+            <h4 class="font-serif font-bold mb-2">Wolne Badania</h4>
+            <p class="text-gray-800">Wspieramy dążenie do wiedzy poprzez rozum, dowody i otwarte badania.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-8 text-center border-red-main border-t-4 bg-opacity-90">
+            <i class="fas fa-comments text-3xl red mb-4"></i>
+            <h4 class="font-serif font-bold mb-2">Otwarty Dialog</h4>
+            <p class="text-gray-800">Tworzymy przestrzenie dla szacunkowej debaty i wymiany perspektyw.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-8 text-center border-red-main border-t-4 bg-opacity-90">
+            <i class="fas fa-balance-scale text-3xl red mb-4"></i>
+            <h4 class="font-serif font-bold mb-2">Racjonalne Myślenie</h4>
+            <p class="text-gray-800">Promujemy krytyczne myślenie i decyzje oparte na dowodach.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EVENTS -->
-  <section id="events" class="py-14 bg-gradient-to-b from-red-50 to-white">
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-xl font-serif font-bold text-center mb-10 red">Nadchodzące wydarzenia</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4">
-          <span class="red font-bold">15 marca 2025</span>
-          <h4 class="font-serif font-bold mt-2 mb-2">Warsztat Krytycznego Myślenia</h4>
-          <p class="text-gray-700 mb-3">Naucz się oceniania argumentów i identyfikowania błędów logicznych.</p>
-          <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
-        </div>
-        <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4">
-          <span class="red font-bold">22 marca 2025</span>
-          <h4 class="font-serif font-bold mt-2 mb-2">Kawiarnia Filozoficzna</h4>
-          <p class="text-gray-700 mb-3">Nieformalne dyskusje o etyce, znaczeniu i naturze wiedzy.</p>
-          <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
-        </div>
-        <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4">
-          <span class="red font-bold">5 kwietnia 2025</span>
-          <h4 class="font-serif font-bold mt-2 mb-2">Sympozjum Wolności Słowa</h4>
-          <p class="text-gray-700 mb-3">Panel o stanie wolności wypowiedzi w nauce i społeczeństwie.</p>
-          <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
+    <!-- EVENTS -->
+    <section id="events" class="py-14 bg-white-80">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-xl font-serif font-bold text-center mb-10 red drop-shadow">Nadchodzące wydarzenia</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4 bg-opacity-90">
+            <span class="red font-bold">15 marca 2025</span>
+            <h4 class="font-serif font-bold mt-2 mb-2">Warsztat Krytycznego Myślenia</h4>
+            <p class="text-gray-800 mb-3">Naucz się oceniania argumentów i identyfikowania błędów logicznych.</p>
+            <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4 bg-opacity-90">
+            <span class="red font-bold">22 marca 2025</span>
+            <h4 class="font-serif font-bold mt-2 mb-2">Kawiarnia Filozoficzna</h4>
+            <p class="text-gray-800 mb-3">Nieformalne dyskusje o etyce, znaczeniu i naturze wiedzy.</p>
+            <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 border-red-main border-l-4 bg-opacity-90">
+            <span class="red font-bold">5 kwietnia 2025</span>
+            <h4 class="font-serif font-bold mt-2 mb-2">Sympozjum Wolności Słowa</h4>
+            <p class="text-gray-800 mb-3">Panel o stanie wolności wypowiedzi w nauce i społeczeństwie.</p>
+            <a href="#" class="red font-bold hover:underline hover:text-red-dark transition-colors">Dowiedz się więcej →</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-14 bg-red-main text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-xl font-serif font-bold mb-6">Zaangażuj się</h3>
-      <p class="text-lg mb-8">Dołącz do naszej społeczności wolnych myślicieli i promuj wolność intelektualną.</p>
-      <a href="mailto:kontakt@wolnamysl.org" class="inline-block bg-white text-red-main font-bold px-8 py-3 rounded-lg shadow hover:bg-gray-100 hover:text-red-dark transition-colors">
-        Skontaktuj się z nami
-      </a>
-      <div class="flex justify-center space-x-8 mt-8">
-        <a href="#" aria-label="Twitter" class="hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-        <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
-        <a href="mailto:kontakt@wolnamysl.org" aria-label="Email" class="hover:text-white transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+    <!-- CONTACT -->
+    <section id="contact" class="py-14 bg-red-80">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-xl font-serif font-bold mb-6 text-white drop-shadow">Zaangażuj się</h3>
+        <p class="text-lg mb-8 text-white">Dołącz do naszej społeczności wolnych myślicieli i promuj wolność intelektualną.</p>
+        <a href="mailto:kontakt@wolnamysl.org" class="inline-block bg-white text-red-main font-bold px-8 py-3 rounded-lg shadow hover:bg-gray-100 hover:text-red-dark transition-colors">
+          Skontaktuj się z nami
+        </a>
+        <div class="flex justify-center space-x-8 mt-8">
+          <a href="#" aria-label="Twitter" class="hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+          <a href="mailto:kontakt@wolnamysl.org" aria-label="Email" class="hover:text-white transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-red-main py-6">
-    <div class="max-w-5xl mx-auto text-center text-sm">
-      © 2025 Stowarzyszenie Wolnej Myśli. Promujemy wolność intelektualną i krytyczne myślenie.
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="bg-black bg-opacity-80 text-white py-6">
+      <div class="max-w-5xl mx-auto text-center text-sm">
+        © 2025 Stowarzyszenie Wolnej Myśli. Promujemy wolność intelektualną i krytyczne myślenie.
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
