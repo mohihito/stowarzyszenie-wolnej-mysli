@@ -8,105 +8,86 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body, .font-calibri {
+    body {
       font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    }
-    .patriot-bg {
-      background-image: url('https://pplx-res.cloudinary.com/image/private/user_uploads/45036844/808809f5-6a5d-4545-89db-dbc1a0a66686/image.jpg');
+      background: url('flaga.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
     }
-    .panel {
-      background: rgba(255,255,255,0.92);
-      border-radius: 1rem;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      margin-bottom: 2rem;
+    .glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
     }
-    .red { color: #DC143C; }
-    .bg-red-main { background-color: #DC143C; }
+    .red { color: #D32F2F; }
+    .bg-red-main { background-color: #D32F2F; }
     .hover\:bg-red-dark:hover { background-color: #b71c1c; }
     .hover\:text-red-dark:hover { color: #b71c1c; }
-    .menu-btn {
-      @apply px-5 py-2 rounded-full font-bold text-white bg-red-main shadow hover:bg-red-dark transition-colors;
-    }
-    .menu-btn-active {
-      @apply bg-white text-red-main border-2 border-red-main;
-    }
   </style>
 </head>
-<body class="patriot-bg font-calibri min-h-screen">
+<body class="min-h-screen flex flex-col items-center">
 
-  <!-- Overlay for readability -->
-  <div class="min-h-screen w-full flex flex-col items-center px-2 md:px-0">
+  <!-- NAVIGATION -->
+  <nav class="w-full flex justify-center mt-8 z-10">
+    <div class="glass flex gap-4 px-8 py-3">
+      <a href="#regulamin" class="text-red font-semibold hover:underline transition-colors">Regulamin</a>
+      <a href="#zarzad" class="text-red font-semibold hover:underline transition-colors">Zarząd</a>
+      <a href="#kontakt" class="text-red font-semibold hover:underline transition-colors">Kontakt</a>
+    </div>
+  </nav>
 
-    <!-- HEADER + MENU -->
-    <header class="w-full max-w-3xl mt-6 mb-2 panel flex flex-col items-center">
-      <img src="logo.jpg" alt="Stowarzyszenie Wolnej Myśli" class="w-32 h-auto mb-2 mt-2">
-      <h1 class="text-2xl md:text-3xl font-bold text-center red mb-2 tracking-wide">
-        STOWARZYSZENIE WOLNEJ MYŚLI
-      </h1>
-      <nav class="flex flex-wrap justify-center gap-3 mt-2 mb-2">
-        <a href="#regulamin" class="menu-btn">Regulamin</a>
-        <a href="#zarzad" class="menu-btn">Zarząd</a>
-        <a href="#kontakt" class="menu-btn">Kontakt</a>
-      </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="glass w-full max-w-3xl mt-8 mb-4 flex flex-col items-center px-6 py-6">
+    <img src="logo.jpg" alt="Stowarzyszenie Wolnej Myśli" class="w-32 h-auto mb-3 rounded-lg shadow">
+    <h1 class="text-3xl md:text-4xl font-bold text-center red tracking-tight mb-2">
+      STOWARZYSZENIE WOLNEJ MYŚLI
+    </h1>
+    <p class="text-lg text-gray-800 text-center max-w-xl">
+      Promujemy otwarty dialog i krytyczne myślenie. Wspieramy wolność intelektualną, racjonalny dyskurs i prawo do niezależnego myślenia bez dogmatów i cenzury.
+    </p>
+  </header>
 
-    <!-- HERO / WSTĘP -->
-    <section class="w-full max-w-3xl panel text-center">
-      <h2 class="text-xl md:text-2xl font-bold red mb-2 mt-2">Promujemy otwarty dialog i krytyczne myślenie</h2>
-      <p class="text-base md:text-lg text-gray-800 mb-5">
-        Wspieramy wolność intelektualną, racjonalny dyskurs i prawo do niezależnego myślenia bez dogmatów i cenzury.
-      </p>
-    </section>
+  <!-- REGULAMIN -->
+  <section id="regulamin" class="glass w-full max-w-3xl mb-6 px-6 py-6">
+    <h2 class="text-2xl font-bold red mb-3 text-center">Regulamin Stowarzyszenia</h2>
+    <ol class="list-decimal list-inside text-gray-800 space-y-1">
+      <li>Członkiem stowarzyszenia może zostać każda osoba akceptująca jego cele.</li>
+      <li>Każdy członek zobowiązany jest do przestrzegania zasad wolności słowa i szacunku wobec innych.</li>
+      <li>Decyzje podejmowane są demokratycznie, z poszanowaniem głosu każdego członka.</li>
+      <li>Stowarzyszenie nie toleruje mowy nienawiści, dyskryminacji ani cenzury.</li>
+      <li>Pełny regulamin dostępny jest na żądanie w siedzibie stowarzyszenia.</li>
+    </ol>
+  </section>
 
-    <!-- REGULAMIN -->
-    <section id="regulamin" class="w-full max-w-3xl panel">
-      <h3 class="text-lg md:text-xl font-bold red mb-2 mt-2 text-center">
-        Regulamin Stowarzyszenia
-      </h3>
-      <ol class="list-decimal list-inside text-gray-800 mb-4">
-        <li>Członkiem stowarzyszenia może zostać każda osoba akceptująca jego cele.</li>
-        <li>Każdy członek zobowiązany jest do przestrzegania zasad wolności słowa i szacunku wobec innych.</li>
-        <li>Decyzje podejmowane są demokratycznie, z poszanowaniem głosu każdego członka.</li>
-        <li>Stowarzyszenie nie toleruje mowy nienawiści, dyskryminacji ani cenzury.</li>
-        <li>Pełny regulamin dostępny jest na żądanie w siedzibie stowarzyszenia.</li>
-      </ol>
-    </section>
+  <!-- ZARZĄD -->
+  <section id="zarzad" class="glass w-full max-w-3xl mb-6 px-6 py-6">
+    <h2 class="text-2xl font-bold red mb-3 text-center">Zarząd Stowarzyszenia</h2>
+    <ul class="text-gray-800 space-y-2 text-center">
+      <li><b>Jan Kowalski</b> – Prezes</li>
+      <li><b>Anna Nowak</b> – Wiceprezes</li>
+      <li><b>Piotr Zieliński</b> – Skarbnik</li>
+      <li><b>Maria Wiśniewska</b> – Sekretarz</li>
+    </ul>
+  </section>
 
-    <!-- ZARZĄD -->
-    <section id="zarzad" class="w-full max-w-3xl panel">
-      <h3 class="text-lg md:text-xl font-bold red mb-2 mt-2 text-center">
-        Zarząd Stowarzyszenia
-      </h3>
-      <ul class="text-gray-800 mb-4">
-        <li><b>Jan Kowalski</b> – Prezes</li>
-        <li><b>Anna Nowak</b> – Wiceprezes</li>
-        <li><b>Piotr Zieliński</b> – Skarbnik</li>
-        <li><b>Maria Wiśniewska</b> – Sekretarz</li>
-      </ul>
-    </section>
+  <!-- KONTAKT -->
+  <section id="kontakt" class="glass w-full max-w-3xl mb-8 px-6 py-6">
+    <h2 class="text-2xl font-bold red mb-3 text-center">Kontakt</h2>
+    <div class="text-gray-800 text-center mb-4">
+      <b>Email:</b> <a href="mailto:kontakt@wolnamysl.org" class="red underline hover:text-red-dark">kontakt@wolnamysl.org</a><br>
+      <b>Adres:</b> ul. Przykładowa 1, 00-000 Warszawa<br>
+      <b>Telefon:</b> +48 123 456 789
+    </div>
+    <div class="flex justify-center space-x-8 mt-4">
+      <a href="#" aria-label="Twitter" class="hover:text-red-main transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+      <a href="#" aria-label="Facebook" class="hover:text-red-main transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+      <a href="mailto:kontakt@wolnamysl.org" aria-label="Email" class="hover:text-red-main transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+    </div>
+  </section>
 
-    <!-- KONTAKT -->
-    <section id="kontakt" class="w-full max-w-3xl panel text-center">
-      <h3 class="text-lg md:text-xl font-bold red mb-2 mt-2">Kontakt</h3>
-      <p class="mb-4 text-gray-800">
-        <b>Email:</b> <a href="mailto:kontakt@wolnamysl.org" class="red underline hover:text-red-dark">kontakt@wolnamysl.org</a><br>
-        <b>Adres:</b> ul. Przykładowa 1, 00-000 Warszawa<br>
-        <b>Telefon:</b> +48 123 456 789
-      </p>
-      <div class="flex justify-center space-x-8 mt-4 mb-2">
-        <a href="#" aria-label="Twitter" class="hover:text-red-main transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-        <a href="#" aria-label="Facebook" class="hover:text-red-main transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
-        <a href="mailto:kontakt@wolnamysl.org" aria-label="Email" class="hover:text-red-main transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
-      </div>
-    </section>
-
-    <!-- STOPKA -->
-    <footer class="w-full max-w-3xl panel text-center text-gray-700 text-sm mb-8">
-      © 2025 Stowarzyszenie Wolnej Myśli. Promujemy wolność intelektualną i krytyczne myślenie.
-    </footer>
-  </div>
+  <!-- FOOTER -->
+  <footer class="glass w-full max-w-3xl text-center text-gray-700 text-sm mb-8 py-2">
+    © 2025 Stowarzyszenie Wolnej Myśli. Promujemy wolność intelektualną i krytyczne myślenie.
+  </footer>
 </body>
 </html>
