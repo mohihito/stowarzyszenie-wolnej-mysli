@@ -8,89 +8,145 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-      background: url('flaga.svg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      background: #f7f7f7;
     }
-    .glass {
-      background: rgba(255,255,255,0.80);
-      backdrop-filter: blur(12px) saturate(1.2);
-      border-radius: 2rem;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
-      border: 1.5px solid rgba(255,255,255,0.25);
-    }
-    .red { color: #D32F2F; }
-    .bg-red-main { background: linear-gradient(90deg, #D32F2F 0%, #b71c1c 100%); }
-    .hover\:bg-red-dark:hover { background: linear-gradient(90deg, #b71c1c 0%, #D32F2F 100%); }
-    .transition { transition: all 0.2s cubic-bezier(.4,0,.2,1); }
-    /* Rozwijanie kontaktu */
-    .contact-expand {
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .group:hover .contact-expand,
-    .group:focus-within .contact-expand {
-      max-height: 200px;
-      opacity: 1;
-      pointer-events: auto;
-    }
+    .red-main { background: linear-gradient(90deg, #D32F2F 0%, #b71c1c 100%); }
+    .hover\:red-dark:hover { background: linear-gradient(90deg, #b71c1c 0%, #D32F2F 100%); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center">
+<body class="flex flex-col min-h-screen">
 
-  <header class="glass w-full max-w-2xl mt-10 mb-6 flex flex-col items-center px-8 py-8 shadow-lg">
-    <a href="index.html" class="block mb-4 focus:outline-none focus:ring-2 focus:ring-red-600 rounded-xl">
-      <img src="logo.svg" alt="Stowarzyszenie Wolnej Myśli" class="h-28 w-auto object-contain rounded-xl shadow-md border-4 border-white transition hover:scale-105" />
-    </a>
-    <h1 class="text-4xl font-extrabold text-center red tracking-tight mb-2 drop-shadow">
-      STOWARZYSZENIE WOLNEJ MYŚLI
-    </h1>
-    <p class="text-lg text-gray-700 text-center max-w-lg mt-2">
-      Promujemy otwarty dialog i krytyczne myślenie. Wspieramy wolność intelektualną, racjonalny dyskurs i prawo do niezależnego myślenia bez dogmatów i cenzury.
-    </p>
+  <!-- Header & Navigation -->
+  <header class="w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <div class="flex items-center gap-4">
+        <img src="logo.svg" alt="Logo Stowarzyszenia Wolnej Myśli" class="h-14 w-14 rounded-lg shadow" />
+        <span class="text-2xl font-bold text-red-700 tracking-tight">Stowarzyszenie Wolnej Myśli</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-lg font-semibold">
+        <a href="#dzialania" class="hover:text-red-700 transition">Działania</a>
+        <a href="#wartosci" class="hover:text-red-700 transition">Wartości</a>
+        <a href="#aktualnosci" class="hover:text-red-700 transition">Aktualności</a>
+        <a href="#kontakt" class="hover:text-red-700 transition">Kontakt</a>
+      </nav>
+      <a href="#wesprzyj" class="ml-6 px-6 py-2 rounded-lg text-white font-bold red-main hover:red-dark transition shadow hidden md:block">Wesprzyj nas</a>
+    </div>
   </header>
 
-  <main class="glass w-full max-w-2xl mb-10 px-8 py-8 flex flex-col items-center text-center shadow-lg">
-    <h2 class="text-2xl font-bold red mb-5">Witamy!</h2>
-    <p class="text-gray-700 mb-8">
-      Poznaj nasze wartości, przeczytaj regulamin, poznaj zarząd lub skontaktuj się z nami.
-    </p>
-    <div class="flex flex-col gap-6 w-full items-center mt-2">
-      <!-- Projekty -->
-      <a href="projekty.html" class="flex flex-col items-center justify-center bg-red-main text-white font-semibold rounded-2xl shadow-md hover:bg-red-dark transition-all duration-200 text-lg w-full max-w-md py-6 px-4 scale-100 hover:scale-105">
-        <span class="flex items-center text-2xl mb-1"><i class="fa-solid fa-lightbulb mr-3"></i> Projekty</span>
-        <span class="text-base font-normal text-white/90 mt-2">Nasze inicjatywy i działania na rzecz wolnej myśli.</span>
-      </a>
-      <!-- Regulamin -->
-      <a href="regulamin.html" class="flex flex-col items-center justify-center bg-red-main text-white font-semibold rounded-2xl shadow-md hover:bg-red-dark transition-all duration-200 text-lg w-full max-w-md py-6 px-4 scale-100 hover:scale-105">
-        <span class="flex items-center text-2xl mb-1"><i class="fa-solid fa-file-contract mr-3"></i> Regulamin</span>
-        <span class="text-base font-normal text-white/90 mt-2">Zasady funkcjonowania naszego stowarzyszenia.</span>
-      </a>
-      <!-- Zarząd -->
-      <a href="zarzad.html" class="flex flex-col items-center justify-center bg-red-main text-white font-semibold rounded-2xl shadow-md hover:bg-red-dark transition-all duration-200 text-lg w-full max-w-md py-6 px-4 scale-100 hover:scale-105">
-        <span class="flex items-center text-2xl mb-1"><i class="fa-solid fa-users mr-3"></i> Zarząd</span>
-        <span class="text-base font-normal text-white/90 mt-2">Poznaj osoby odpowiedzialne za działalność SWM.</span>
-      </a>
-      <!-- Kontakt -->
-      <div tabindex="0" class="group flex flex-col items-center justify-center bg-red-main text-white font-semibold rounded-2xl shadow-md transition-all duration-300 text-lg w-full max-w-md py-6 px-4 scale-100 cursor-pointer hover:bg-red-dark hover:scale-105 focus:outline-none">
-        <span class="flex items-center text-2xl mb-1"><i class="fa-solid fa-envelope mr-3"></i> Kontakt</span>
-        <span class="text-base font-normal text-white/90 mt-2">Skontaktuj się z nami!</span>
-        <div class="contact-expand w-full mt-4">
-          <div class="text-white text-base bg-red-900/70 rounded-xl p-4">
-            <b>Adres e-mail:</b> <a href="mailto:kontakt@wolnamysl.pl" class="underline hover:text-gray-200">kontakt@wolnamysl.pl</a><br>
-            <b>Facebook:</b> <a href="#" class="underline hover:text-gray-200">facebook.com/wolnamysl</a><br>
-            <b>Telefon:</b> <a href="tel:+48123456789" class="underline hover:text-gray-200">+48 123 456 789</a>
-          </div>
+  <!-- Hero Section -->
+  <section class="w-full red-main text-white py-16 shadow-lg">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow">Wolność Myślenia • Otwarty Dialog</h1>
+      <p class="text-xl md:text-2xl font-light mb-6">
+        Wspieramy niezależność intelektualną, racjonalny dyskurs i prawo do własnych przekonań. Dołącz do nas i budujmy razem społeczeństwo otwarte na różnorodność myśli!
+      </p>
+      <a href="#wesprzyj" class="px-8 py-4 rounded-xl font-bold text-lg bg-white text-red-700 hover:bg-red-100 transition shadow-lg">Wesprzyj naszą misję</a>
+    </div>
+  </section>
+
+  <!-- Aktualności -->
+  <section id="aktualnosci" class="max-w-7xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Aktualności</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+        <span class="text-red-600 font-bold mb-2">26 czerwca 2025</span>
+        <h3 class="font-bold text-xl mb-2">Nowy projekt: Akademia Wolnej Myśli</h3>
+        <p class="flex-1 mb-4 text-gray-700">Rozpoczynamy cykl spotkań i warsztatów promujących krytyczne myślenie i otwarty dialog wśród młodzieży i dorosłych.</p>
+        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+        <span class="text-red-600 font-bold mb-2">18 czerwca 2025</span>
+        <h3 class="font-bold text-xl mb-2">Spotkanie zarządu SWM</h3>
+        <p class="flex-1 mb-4 text-gray-700">Podsumowaliśmy ostatnie działania i zaplanowaliśmy kolejne inicjatywy na rzecz swobodnej wymiany myśli.</p>
+        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+        <span class="text-red-600 font-bold mb-2">10 czerwca 2025</span>
+        <h3 class="font-bold text-xl mb-2">Wolność słowa – debata publiczna</h3>
+        <p class="flex-1 mb-4 text-gray-700">Zapraszamy na debatę o granicach wolności słowa i roli stowarzyszeń obywatelskich w Polsce.</p>
+        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Działania -->
+  <section id="dzialania" class="w-full bg-gray-100 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Co robimy?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <i class="fa-solid fa-lightbulb text-4xl text-red-600 mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Projekty edukacyjne</h3>
+          <p class="text-gray-700">Organizujemy warsztaty, wykłady i spotkania, które uczą krytycznego myślenia i niezależności intelektualnej.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <i class="fa-solid fa-comments text-4xl text-red-600 mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Debaty i dyskusje</h3>
+          <p class="text-gray-700">Tworzymy przestrzeń do otwartego dialogu na temat najważniejszych wyzwań społecznych i kulturowych.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <i class="fa-solid fa-users text-4xl text-red-600 mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Wspólnota i wsparcie</h3>
+          <p class="text-gray-700">Budujemy społeczność osób zaangażowanych w promocję wolnej myśli i wzajemnego szacunku.</p>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="glass w-full max-w-2xl text-center text-gray-600 text-sm mb-8 py-3 shadow">
-    © 2025 Stowarzyszenie Wolnej Myśli. Nowoczesność i wolność intelektualna.
+  <!-- Wartości -->
+  <section id="wartosci" class="max-w-7xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze wartości</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="font-bold text-xl mb-2">Wolność</h3>
+        <p class="text-gray-700">Wspieramy swobodę myślenia, wyrażania opinii i poszukiwania prawdy bez cenzury i dogmatów.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="font-bold text-xl mb-2">Szacunek</h3>
+        <p class="text-gray-700">Dbamy o godność każdego człowieka, niezależnie od poglądów, pochodzenia czy wyznania.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="font-bold text-xl mb-2">Solidarność</h3>
+        <p class="text-gray-700">Wspieramy się nawzajem i działamy razem na rzecz lepszego, bardziej otwartego społeczeństwa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt & Footer -->
+  <section id="kontakt" class="w-full bg-gray-100 py-12">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Kontakt</h2>
+      <div class="bg-white rounded-xl shadow p-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+        <div class="flex-1">
+          <p class="mb-2"><b>Stowarzyszenie Wolnej Myśli</b></p>
+          <p class="mb-2"><i class="fa-solid fa-envelope mr-2 text-red-600"></i> kontakt@wolnamysl.pl</p>
+          <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-red-600"></i> +48 123 456 789</p>
+          <p class="mb-2"><i class="fa-brands fa-facebook mr-2 text-red-600"></i> <a href="#" class="underline hover:text-red-700">facebook.com/wolnamysl</a></p>
+        </div>
+        <div class="flex-1 w-full">
+          <form class="flex flex-col gap-4">
+            <input type="text" placeholder="Imię i nazwisko" class="border rounded-lg px-4 py-2 w-full" required>
+            <input type="email" placeholder="Adres e-mail" class="border rounded-lg px-4 py-2 w-full" required>
+            <textarea placeholder="Treść wiadomości" class="border rounded-lg px-4 py-2 w-full" rows="4" required></textarea>
+            <button type="submit" class="red-main text-white font-bold py-2 px-6 rounded-lg hover:red-dark transition">Wyślij</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full bg-white border-t mt-auto">
+    <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between text-gray-600 text-sm">
+      <div>© 2025 Stowarzyszenie Wolnej Myśli. Wszelkie prawa zastrzeżone.</div>
+      <div class="mt-2 md:mt-0">
+        <a href="#dzialania" class="hover:text-red-700 mx-2">Działania</a>
+        <a href="#wartosci" class="hover:text-red-700 mx-2">Wartości</a>
+        <a href="#aktualnosci" class="hover:text-red-700 mx-2">Aktualności</a>
+        <a href="#kontakt" class="hover:text-red-700 mx-2">Kontakt</a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
