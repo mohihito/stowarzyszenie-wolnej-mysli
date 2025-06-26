@@ -13,6 +13,14 @@
     }
     .red-main { background: linear-gradient(90deg, #D32F2F 0%, #b71c1c 100%); }
     .hover\:red-dark:hover { background: linear-gradient(90deg, #b71c1c 0%, #D32F2F 100%); }
+    .upcoming {
+      border-left: 4px solid #D32F2F;
+      padding-left: 1rem;
+      background-color: #fff4f4;
+      font-weight: 700;
+      color: #b71c1c;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -47,24 +55,26 @@
   <section id="aktualnosci" class="max-w-7xl mx-auto py-12 px-4">
     <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Aktualności</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-        <span class="text-red-600 font-bold mb-2">26 czerwca 2025</span>
-        <h3 class="font-bold text-xl mb-2">Nowy projekt: Akademia Wolnej Myśli</h3>
-        <p class="flex-1 mb-4 text-gray-700">Rozpoczynamy cykl spotkań i warsztatów promujących krytyczne myślenie i otwarty dialog wśród młodzieży i dorosłych.</p>
-        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col upcoming">
+        <span class="text-red-700 font-bold mb-2">1 września 2025</span>
+        <h3 class="font-bold text-xl mb-2">I jawne zebranie zarządu oraz członków</h3>
+        <p class="flex-1 mb-4 text-red-700 font-semibold">Nadchodzące wydarzenie</p>
+        <p class="flex-1 mb-4 text-gray-700">Wybranie Zarządu, uchwalenie Logo, uchwalenie Regulaminu.</p>
       </div>
+
       <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-        <span class="text-red-600 font-bold mb-2">18 czerwca 2025</span>
-        <h3 class="font-bold text-xl mb-2">Spotkanie zarządu SWM</h3>
-        <p class="flex-1 mb-4 text-gray-700">Podsumowaliśmy ostatnie działania i zaplanowaliśmy kolejne inicjatywy na rzecz swobodnej wymiany myśli.</p>
-        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+        <span class="text-red-600 font-bold mb-2">24 maja 2025</span>
+        <h3 class="font-bold text-xl mb-2">I niejawne zebranie zarządu oraz członków</h3>
+        <p class="flex-1 mb-4 text-gray-700">Zebraliśmy się omówić podstawy stowarzyszenia w Sushimani w Łomiankach</p>
       </div>
+
       <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-        <span class="text-red-600 font-bold mb-2">10 czerwca 2025</span>
-        <h3 class="font-bold text-xl mb-2">Wolność słowa – debata publiczna</h3>
-        <p class="flex-1 mb-4 text-gray-700">Zapraszamy na debatę o granicach wolności słowa i roli stowarzyszeń obywatelskich w Polsce.</p>
-        <a href="#" class="text-red-700 font-semibold hover:underline mt-auto">Czytaj więcej</a>
+        <span class="text-red-600 font-bold mb-2">8 czerwca 2025</span>
+        <h3 class="font-bold text-xl mb-2">II niejawne zebranie zarządu oraz członków</h3>
+        <p class="flex-1 mb-4 text-gray-700">Zebraliśmy się omówić podstawy stowarzyszenia w Sushimani w Łomiankach.</p>
       </div>
+
     </div>
   </section>
 
