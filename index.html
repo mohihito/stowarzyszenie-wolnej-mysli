@@ -20,14 +20,12 @@
   <!-- Header & Navigation -->
   <header class="w-full bg-white shadow-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
-      <div class="flex items-center gap-4">
-        <img src="logo.svg" alt="Logo Stowarzyszenia Wolnej Myśli" class="h-14 w-14 rounded-lg shadow" />
-        <span class="text-2xl font-bold text-red-700 tracking-tight">Stowarzyszenie Wolnej Myśli</span>
-      </div>
+      <a href="index.html">
+        <img src="logo.svg" alt="Logo Stowarzyszenia Wolnej Myśli" class="h-24 w-auto rounded-lg shadow" />
+      </a>
       <nav class="hidden md:flex gap-8 text-lg font-semibold">
-        <a href="#dzialania" class="hover:text-red-700 transition">Działania</a>
-        <a href="#wartosci" class="hover:text-red-700 transition">Wartości</a>
-        <a href="#aktualnosci" class="hover:text-red-700 transition">Aktualności</a>
+        <a href="projekty.html" class="hover:text-red-700 transition">Projekty</a>
+        <a href="regulamin.html" class="hover:text-red-700 transition">Regulamin</a>
         <a href="#kontakt" class="hover:text-red-700 transition">Kontakt</a>
       </nav>
       <a href="#wesprzyj" class="ml-6 px-6 py-2 rounded-lg text-white font-bold red-main hover:red-dark transition shadow hidden md:block">Wesprzyj nas</a>
@@ -37,11 +35,11 @@
   <!-- Hero Section -->
   <section class="w-full red-main text-white py-16 shadow-lg">
     <div class="max-w-4xl mx-auto flex flex-col items-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow">Wolność Myślenia • Otwarty Dialog</h1>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow">Stowarzyszenie Wolnej Myśli</h1>
       <p class="text-xl md:text-2xl font-light mb-6">
         Wspieramy niezależność intelektualną, racjonalny dyskurs i prawo do własnych przekonań. Dołącz do nas i budujmy razem społeczeństwo otwarte na różnorodność myśli!
       </p>
-      <a href="#wesprzyj" class="px-8 py-4 rounded-xl font-bold text-lg bg-white text-red-700 hover:bg-red-100 transition shadow-lg">Wesprzyj naszą misję</a>
+      <a href="#wesprzyj" class="mt-4 px-8 py-4 rounded-xl font-bold text-lg bg-white text-red-700 hover:bg-red-100 transition shadow-lg">Wesprzyj naszą misję</a>
     </div>
   </section>
 
@@ -70,25 +68,24 @@
     </div>
   </section>
 
-  <!-- Działania -->
-  <section id="dzialania" class="w-full bg-gray-100 py-12">
+  <!-- Projekty -->
+  <section id="projekty" class="w-full bg-gray-100 py-12">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Co robimy?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
-          <i class="fa-solid fa-lightbulb text-4xl text-red-600 mb-4"></i>
-          <h3 class="font-bold text-xl mb-2">Projekty edukacyjne</h3>
-          <p class="text-gray-700">Organizujemy warsztaty, wykłady i spotkania, które uczą krytycznego myślenia i niezależności intelektualnej.</p>
+      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze Projekty</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center">
+          <img src="projekt1.jpg" alt="Projekt 1" class="w-full md:w-48 h-48 object-cover rounded-xl mb-4 md:mb-0 md:mr-8" />
+          <div>
+            <h3 class="font-bold text-2xl mb-2">Akademia Wolnej Myśli</h3>
+            <p class="text-gray-700">Cykl warsztatów i spotkań promujących krytyczne myślenie wśród młodzieży i dorosłych.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
-          <i class="fa-solid fa-comments text-4xl text-red-600 mb-4"></i>
-          <h3 class="font-bold text-xl mb-2">Debaty i dyskusje</h3>
-          <p class="text-gray-700">Tworzymy przestrzeń do otwartego dialogu na temat najważniejszych wyzwań społecznych i kulturowych.</p>
-        </div>
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
-          <i class="fa-solid fa-users text-4xl text-red-600 mb-4"></i>
-          <h3 class="font-bold text-xl mb-2">Wspólnota i wsparcie</h3>
-          <p class="text-gray-700">Budujemy społeczność osób zaangażowanych w promocję wolnej myśli i wzajemnego szacunku.</p>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center">
+          <img src="projekt2.jpg" alt="Projekt 2" class="w-full md:w-48 h-48 object-cover rounded-xl mb-4 md:mb-0 md:mr-8" />
+          <div>
+            <h3 class="font-bold text-2xl mb-2">Debaty Obywatelskie</h3>
+            <p class="text-gray-700">Organizujemy otwarte debaty na tematy społeczne, kulturowe i naukowe.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -96,7 +93,7 @@
 
   <!-- Wartości -->
   <section id="wartosci" class="max-w-7xl mx-auto py-12 px-4">
-    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze wartości</h2>
+    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze Wartości</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white rounded-xl shadow p-6">
         <h3 class="font-bold text-xl mb-2">Wolność</h3>
@@ -113,24 +110,62 @@
     </div>
   </section>
 
-  <!-- Kontakt & Footer -->
-  <section id="kontakt" class="w-full bg-gray-100 py-12">
+  <!-- Zarząd -->
+  <section id="zarzad" class="w-full bg-gray-100 py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Zarząd</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <img src="zarzad1.jpg" alt="Prezes" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
+          <h3 class="font-bold text-xl mb-1">Jan Kowalski</h3>
+          <span class="text-red-700 font-semibold mb-2">Prezes</span>
+          <p class="text-gray-700">Inicjator i lider Stowarzyszenia, pasjonat wolnej myśli i edukacji obywatelskiej.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <img src="zarzad2.jpg" alt="Wiceprezes" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
+          <h3 class="font-bold text-xl mb-1">Anna Nowak</h3>
+          <span class="text-red-700 font-semibold mb-2">Wiceprezes</span>
+          <p class="text-gray-700">Odpowiedzialna za projekty edukacyjne i współpracę z młodzieżą.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <img src="zarzad3.jpg" alt="Sekretarz" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
+          <h3 class="font-bold text-xl mb-1">Piotr Zieliński</h3>
+          <span class="text-red-700 font-semibold mb-2">Sekretarz</span>
+          <p class="text-gray-700">Zajmuje się komunikacją i dokumentacją działań Stowarzyszenia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wesprzyj nas (anchor for nav and hero button) -->
+  <section id="wesprzyj" class="w-full bg-white py-12 border-t">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-red-700 mb-6">Wesprzyj naszą działalność</h2>
+      <p class="mb-8 text-gray-700 text-lg">Twoje wsparcie pomaga nam realizować projekty edukacyjne, debaty i działania na rzecz wolności myśli. Dziękujemy!</p>
+      <a href="mailto:kontakt@wolnamysl.pl" class="red-main text-white font-bold py-4 px-10 rounded-lg hover:red-dark transition text-lg shadow-lg inline-block">
+        Wpłać darowiznę
+      </a>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="w-full bg-white py-12 border-t">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Kontakt</h2>
-      <div class="bg-white rounded-xl shadow p-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div class="bg-gray-50 rounded-xl shadow p-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+        <div class="flex-1 w-full">
+          <form class="flex flex-col gap-4">
+            <input type="email" placeholder="Twój adres e-mail" class="border rounded-lg px-4 py-2 w-full" required>
+            <input type="text" placeholder="Temat wiadomości" class="border rounded-lg px-4 py-2 w-full" required>
+            <textarea placeholder="Treść wiadomości" class="border rounded-lg px-4 py-2 w-full" rows="4" required></textarea>
+            <button type="submit" class="red-main text-white font-bold py-2 px-6 rounded-lg hover:red-dark transition">Wyślij</button>
+          </form>
+        </div>
         <div class="flex-1">
           <p class="mb-2"><b>Stowarzyszenie Wolnej Myśli</b></p>
           <p class="mb-2"><i class="fa-solid fa-envelope mr-2 text-red-600"></i> kontakt@wolnamysl.pl</p>
           <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-red-600"></i> +48 123 456 789</p>
           <p class="mb-2"><i class="fa-brands fa-facebook mr-2 text-red-600"></i> <a href="#" class="underline hover:text-red-700">facebook.com/wolnamysl</a></p>
-        </div>
-        <div class="flex-1 w-full">
-          <form class="flex flex-col gap-4">
-            <input type="text" placeholder="Imię i nazwisko" class="border rounded-lg px-4 py-2 w-full" required>
-            <input type="email" placeholder="Adres e-mail" class="border rounded-lg px-4 py-2 w-full" required>
-            <textarea placeholder="Treść wiadomości" class="border rounded-lg px-4 py-2 w-full" rows="4" required></textarea>
-            <button type="submit" class="red-main text-white font-bold py-2 px-6 rounded-lg hover:red-dark transition">Wyślij</button>
-          </form>
         </div>
       </div>
     </div>
@@ -140,10 +175,10 @@
     <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between text-gray-600 text-sm">
       <div>© 2025 Stowarzyszenie Wolnej Myśli. Wszelkie prawa zastrzeżone.</div>
       <div class="mt-2 md:mt-0">
-        <a href="#dzialania" class="hover:text-red-700 mx-2">Działania</a>
-        <a href="#wartosci" class="hover:text-red-700 mx-2">Wartości</a>
-        <a href="#aktualnosci" class="hover:text-red-700 mx-2">Aktualności</a>
+        <a href="projekty.html" class="hover:text-red-700 mx-2">Projekty</a>
+        <a href="regulamin.html" class="hover:text-red-700 mx-2">Regulamin</a>
         <a href="#kontakt" class="hover:text-red-700 mx-2">Kontakt</a>
+        <a href="#wesprzyj" class="hover:text-red-700 mx-2">Wesprzyj nas</a>
       </div>
     </div>
   </footer>
