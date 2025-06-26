@@ -10,89 +10,137 @@
     body {
       font-family: 'Segoe UI', Calibri, Arial, sans-serif;
       background: #f7f7f7;
+      /* Flaga Polski jako tło – podmień na swój plik lub SVG data-uri */
+      background-image: url('flaga.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+    }
+    .bg-overlay {
+      background: rgba(0,0,0,0.28);
+      border-radius: 1rem;
+      padding: 0.3em 1em;
+      display: inline-block;
     }
     .red-main { background: linear-gradient(90deg, #D32F2F 0%, #b71c1c 100%); }
     .hover\:red-dark:hover { background: linear-gradient(90deg, #b71c1c 0%, #D32F2F 100%); }
     .upcoming {
       border-left: 4px solid #D32F2F;
       padding-left: 1rem;
-      background-color: #fff4f4;
+      background-color: rgba(255,255,255,0.85);
       font-weight: 700;
       color: #b71c1c;
       margin-bottom: 1rem;
+    }
+    .card-bg {
+      background: rgba(255,255,255,0.80);
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+    }
+    .contact-bg {
+      background: rgba(255,255,255,0.85);
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: -0.01em;
+    }
+    .text-hero {
+      color: #fff;
+    }
+    .btn-main {
+      background: rgba(211,47,47,0.95);
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .btn-main:hover {
+      background: rgba(183,28,28,0.95);
+    }
+    /* Sekcja tytułowa z tłem SVG */
+    .hero-svg-bg {
+      background: url('title.svg') center center/cover no-repeat;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 640px) {
+      .hero-svg-bg {
+        min-height: 280px;
+      }
     }
   </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
   <!-- Header & Navigation -->
-  <header class="w-full bg-white shadow-md">
+  <header class="w-full bg-overlay shadow-md mt-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
       <a href="index.html">
         <img src="logo.svg" alt="Logo Stowarzyszenia Wolnej Myśli" class="h-24 w-auto rounded-lg shadow" />
       </a>
       <div class="flex items-center gap-4">
         <nav class="flex gap-8 text-lg font-semibold">
-          <a href="projekty.html" class="hover:text-red-700 transition">Projekty</a>
-          <a href="regulamin.html" class="hover:text-red-700 transition">Regulamin</a>
-          <a href="#kontakt" class="hover:text-red-700 transition">Kontakt</a>
+          <a href="projekty.html" class="hover:text-red-700 transition text-hero">Projekty</a>
+          <a href="regulamin.html" class="hover:text-red-700 transition text-hero">Regulamin</a>
+          <a href="#kontakt" class="hover:text-red-700 transition text-hero">Kontakt</a>
         </nav>
-        <a href="#wesprzyj" class="ml-6 px-6 py-2 rounded-lg text-white font-bold red-main hover:red-dark transition shadow">Wesprzyj nas</a>
+        <a href="#wesprzyj" class="ml-6 px-6 py-2 rounded-lg btn-main shadow">Wesprzyj nas</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="w-full red-main text-white py-16 shadow-lg">
-    <div class="max-w-4xl mx-auto flex flex-col items-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow">Stowarzyszenie Wolnej Myśli</h1>
-      <p class="text-xl md:text-2xl font-light mb-6">
+  <!-- Hero Section with SVG background -->
+  <section class="w-full hero-svg-bg shadow-lg">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center px-4 py-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 bg-overlay text-hero">Stowarzyszenie Wolnej Myśli</h1>
+      <p class="text-xl md:text-2xl font-light mb-6 bg-overlay text-hero">
         Wspieramy niezależność intelektualną, racjonalny dyskurs i prawo do własnych przekonań. Dołącz do nas i budujmy razem społeczeństwo otwarte na różnorodność myśli!
       </p>
-      <a href="#wesprzyj" class="mt-4 px-8 py-4 rounded-xl font-bold text-lg bg-white text-red-700 hover:bg-red-100 transition shadow-lg">Wesprzyj naszą misję</a>
+      <a href="#wesprzyj" class="mt-4 px-8 py-4 rounded-xl btn-main shadow-lg">Wesprzyj naszą misję</a>
     </div>
   </section>
 
   <!-- Aktualności -->
   <section id="aktualnosci" class="max-w-7xl mx-auto py-12 px-4">
-    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Aktualności</h2>
+    <h2 class="text-3xl font-bold bg-overlay text-hero mb-8 text-center">Aktualności</h2>
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="bg-white rounded-xl shadow p-6 flex flex-col upcoming">
+      <div class="card-bg p-6 flex flex-col upcoming">
         <span class="text-red-700 font-bold mb-2">1 września 2025</span>
         <h3 class="font-bold text-xl mb-2">I jawne zebranie zarządu oraz członków</h3>
         <p class="flex-1 mb-4 text-red-700 font-semibold">Nadchodzące wydarzenie</p>
         <p class="flex-1 mb-4 text-gray-700">Wybranie Zarządu, uchwalenie Logo, uchwalenie Regulaminu.</p>
       </div>
-
-      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+      <div class="card-bg p-6 flex flex-col">
         <span class="text-red-600 font-bold mb-2">24 maja 2025</span>
         <h3 class="font-bold text-xl mb-2">I niejawne zebranie zarządu oraz członków</h3>
         <p class="flex-1 mb-4 text-gray-700">Zebraliśmy się omówić podstawy stowarzyszenia w Sushimani w Łomiankach</p>
       </div>
-
-      <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+      <div class="card-bg p-6 flex flex-col">
         <span class="text-red-600 font-bold mb-2">8 czerwca 2025</span>
         <h3 class="font-bold text-xl mb-2">II niejawne zebranie zarządu oraz członków</h3>
         <p class="flex-1 mb-4 text-gray-700">Zebraliśmy się omówić podstawy stowarzyszenia w Sushimani w Łomiankach.</p>
       </div>
-
     </div>
   </section>
 
   <!-- Projekty -->
-  <section id="projekty" class="w-full bg-gray-100 py-12">
+  <section id="projekty" class="w-full py-12">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze Projekty</h2>
+      <h2 class="text-3xl font-bold bg-overlay text-hero mb-8 text-center">Nasze Projekty</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center">
+        <div class="card-bg p-6 flex flex-col md:flex-row items-center">
           <img src="projekt1.jpg" alt="Projekt 1" class="w-full md:w-48 h-48 object-cover rounded-xl mb-4 md:mb-0 md:mr-8" />
           <div>
             <h3 class="font-bold text-2xl mb-2">Akademia Wolnej Myśli</h3>
             <p class="text-gray-700">Cykl warsztatów i spotkań promujących krytyczne myślenie wśród młodzieży i dorosłych.</p>
           </div>
         </div>
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center">
+        <div class="card-bg p-6 flex flex-col md:flex-row items-center">
           <img src="projekt2.jpg" alt="Projekt 2" class="w-full md:w-48 h-48 object-cover rounded-xl mb-4 md:mb-0 md:mr-8" />
           <div>
             <h3 class="font-bold text-2xl mb-2">Debaty Obywatelskie</h3>
@@ -105,17 +153,17 @@
 
   <!-- Wartości -->
   <section id="wartosci" class="max-w-7xl mx-auto py-12 px-4">
-    <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Nasze Wartości</h2>
+    <h2 class="text-3xl font-bold bg-overlay text-hero mb-8 text-center">Nasze Wartości</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow p-6">
+      <div class="card-bg p-6">
         <h3 class="font-bold text-xl mb-2">Wolność</h3>
         <p class="text-gray-700">Wspieramy swobodę myślenia, wyrażania opinii i poszukiwania prawdy bez cenzury i dogmatów.</p>
       </div>
-      <div class="bg-white rounded-xl shadow p-6">
+      <div class="card-bg p-6">
         <h3 class="font-bold text-xl mb-2">Szacunek</h3>
         <p class="text-gray-700">Dbamy o godność każdego człowieka, niezależnie od poglądów, pochodzenia czy wyznania.</p>
       </div>
-      <div class="bg-white rounded-xl shadow p-6">
+      <div class="card-bg p-6">
         <h3 class="font-bold text-xl mb-2">Solidarność</h3>
         <p class="text-gray-700">Wspieramy się nawzajem i działamy razem na rzecz lepszego, bardziej otwartego społeczeństwa.</p>
       </div>
@@ -123,23 +171,23 @@
   </section>
 
   <!-- Zarząd -->
-  <section id="zarzad" class="w-full bg-gray-100 py-12">
+  <section id="zarzad" class="w-full py-12">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Zarząd</h2>
+      <h2 class="text-3xl font-bold bg-overlay text-hero mb-8 text-center">Zarząd</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+        <div class="card-bg p-6 flex flex-col items-center text-center">
           <img src="zarzad1.jpg" alt="Prezes" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
           <h3 class="font-bold text-xl mb-1">Jan Kowalski</h3>
           <span class="text-red-700 font-semibold mb-2">Prezes</span>
           <p class="text-gray-700">Inicjator i lider Stowarzyszenia, pasjonat wolnej myśli i edukacji obywatelskiej.</p>
         </div>
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+        <div class="card-bg p-6 flex flex-col items-center text-center">
           <img src="zarzad2.jpg" alt="Wiceprezes" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
           <h3 class="font-bold text-xl mb-1">Anna Nowak</h3>
           <span class="text-red-700 font-semibold mb-2">Wiceprezes</span>
           <p class="text-gray-700">Odpowiedzialna za projekty edukacyjne i współpracę z młodzieżą.</p>
         </div>
-        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+        <div class="card-bg p-6 flex flex-col items-center text-center">
           <img src="zarzad3.jpg" alt="Sekretarz" class="w-32 h-32 object-cover rounded-full mb-4 shadow" />
           <h3 class="font-bold text-xl mb-1">Piotr Zieliński</h3>
           <span class="text-red-700 font-semibold mb-2">Sekretarz</span>
@@ -149,28 +197,26 @@
     </div>
   </section>
 
-  <!-- Wesprzyj nas (anchor for nav and hero button) -->
-  <section id="wesprzyj" class="w-full bg-white py-12 border-t">
+  <!-- Wesprzyj nas -->
+  <section id="wesprzyj" class="w-full py-12 border-t card-bg">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-red-700 mb-6">Wesprzyj naszą działalność</h2>
+      <h2 class="text-3xl font-bold bg-overlay text-hero mb-6">Wesprzyj naszą działalność</h2>
       <p class="mb-8 text-gray-700 text-lg">Twoje wsparcie pomaga nam realizować projekty edukacyjne, debaty i działania na rzecz wolności myśli. Dziękujemy!</p>
-      <a href="mailto:kontakt@wolnamysl.pl" class="red-main text-white font-bold py-4 px-10 rounded-lg hover:red-dark transition text-lg shadow-lg inline-block">
-        Wpłać darowiznę
-      </a>
+      <a href="mailto:kontakt@wolnamysl.pl" class="btn-main py-4 px-10 rounded-lg text-lg shadow-lg inline-block">Wpłać darowiznę</a>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section id="kontakt" class="w-full bg-white py-12 border-t">
+  <section id="kontakt" class="w-full py-12 border-t">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Kontakt</h2>
-      <div class="bg-gray-50 rounded-xl shadow p-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+      <h2 class="text-3xl font-bold bg-overlay text-hero mb-8 text-center">Kontakt</h2>
+      <div class="contact-bg shadow p-8 flex flex-col md:flex-row items-center md:items-start gap-8">
         <div class="flex-1 w-full">
           <form class="flex flex-col gap-4">
             <input type="email" placeholder="Twój adres e-mail" class="border rounded-lg px-4 py-2 w-full" required>
             <input type="text" placeholder="Temat wiadomości" class="border rounded-lg px-4 py-2 w-full" required>
             <textarea placeholder="Treść wiadomości" class="border rounded-lg px-4 py-2 w-full" rows="4" required></textarea>
-            <button type="submit" class="red-main text-white font-bold py-2 px-6 rounded-lg hover:red-dark transition">Wyślij</button>
+            <button type="submit" class="btn-main py-2 px-6 rounded-lg">Wyślij</button>
           </form>
         </div>
         <div class="flex-1">
@@ -183,14 +229,14 @@
     </div>
   </section>
 
-  <footer class="w-full bg-white border-t mt-auto">
-    <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between text-gray-600 text-sm">
+  <footer class="w-full bg-overlay border-t mt-auto">
+    <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between text-gray-200 text-sm">
       <div>© 2025 Stowarzyszenie Wolnej Myśli. Wszelkie prawa zastrzeżone.</div>
       <div class="mt-2 md:mt-0">
-        <a href="projekty.html" class="hover:text-red-700 mx-2">Projekty</a>
-        <a href="regulamin.html" class="hover:text-red-700 mx-2">Regulamin</a>
-        <a href="#kontakt" class="hover:text-red-700 mx-2">Kontakt</a>
-        <a href="#wesprzyj" class="hover:text-red-700 mx-2">Wesprzyj nas</a>
+        <a href="projekty.html" class="hover:text-red-700 mx-2 text-hero">Projekty</a>
+        <a href="regulamin.html" class="hover:text-red-700 mx-2 text-hero">Regulamin</a>
+        <a href="#kontakt" class="hover:text-red-700 mx-2 text-hero">Kontakt</a>
+        <a href="#wesprzyj" class="hover:text-red-700 mx-2 text-hero">Wesprzyj nas</a>
       </div>
     </div>
   </footer>
